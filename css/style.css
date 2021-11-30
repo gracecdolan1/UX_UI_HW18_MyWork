@@ -1,0 +1,102 @@
+section {
+    background: linear-gradient(180deg, rgba(214,119,52,0.75) 0%, rgba(128,145,235,0.75) 50%, rgba(214,119,52,0.75) 100%);
+    background-position: center;
+
+}
+
+.workGrid {
+    margin-right: 20%;
+    margin-left: 20%;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 50% 50%;
+    grid-template-areas:
+    "SMTBlurb SMTPhoto"
+    "DeptEdPhoto DeptEdBlurb"
+    "ZeltBlurb ZeltPhoto"
+}
+
+#SMTPhoto {
+    grid-area: SMTPhoto;
+    display: flex;
+    justify-content: center;
+    object-fit: cover;
+    width: 60%;
+    max-height: 80%;
+    margin-left: 20%;
+}
+
+#SMTBlurb {
+    grid-area: SMTBlurb;
+    margin-right: 10%;
+    text-align: right;
+}
+
+#DeptEdPhoto {
+    grid-area: DeptEdPhoto;
+    display: flex;
+    justify-content: right;
+    width: 60%;
+    max-height: 80%;
+}
+
+#DeptEdBlurb {
+    grid-area: DeptEdBlurb;
+    text-align: left;
+    
+}
+
+#ZeltPhoto {
+    grid-area: ZeltPhoto;
+    display: flex;
+    justify-content:center;
+    width: 60%;
+    max-height: 80%;
+}
+
+#ZeltBlurb {
+    grid-area: ZeltBlurb;
+    text-align: right;
+}
+h4 {
+    font-family: 'Mulish', sans-serif;
+    text-transform: uppercase;
+    font-style: normal;
+    font-size: 30px;
+    color: white;
+}
+
+
+
+h1 {
+    font-family: 'Mulish', sans-serif;
+    color: #6270B5;
+    font-size: 40px;
+    text-align: center;
+}
+
+button {
+    font-family: 'Mulish', sans-serif;
+    font-style: bolder;
+    font-size: 20px;
+    background-color: white;
+    border: none;
+    text-align: center;
+    padding: 8px 12px;
+    border-radius: 10px;
+    color: #6270B5;
+    
+}
+/* Media Query*/
+@media only screen and (max-width: 600px) {
+    .workGrid {
+        grid-template-rows: 300px 300px 300px 300px 300px 300px;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "SMTBlurb"
+        "SMTPhoto"
+        "DeptEdBlurb"
+        "DeptEdPhoto" 
+        "ZeltBlurb" 
+        "ZeltPhoto";
+}}
